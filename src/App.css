@@ -1,0 +1,199 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  background-color: #FEF5EB; /* צבע הרקע מהתמונה */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכוז אופקי */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 500px; /* הגבלה לרוחב טלפון ממוצע */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכוז תוכן פנימי */
+  padding: 20px;
+  flex: 1;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.main-title{
+  color: #EE6C4D; /* הכתום מהתמונה */
+  font-size: 2rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.reports-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+/* מיכל הכפתורים הצפים */
+.fab-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* הגדרת גודל אחיד לשני הכפתורים */
+.pdf-floating-tab, .add-report-btn {
+    width: 50px;  /* גודל אחיד */
+    height: 50px; /* גודל אחיד */
+    border-radius: 16px; /* פינות מעוגלות בסגנון הטאבים */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    padding: 0; /* ביטול פאדינג שמשפיע על הגודל */
+}
+
+/* סגנון ספציפי לכפתור ה-PDF */
+.pdf-floating-tab {
+    background-color: #555B6E;
+    color: white;
+    flex-direction: column; /* אייקון מעל טקסט קטן */
+    font-size: 10px; /* טקסט קטן מאוד כדי שייכנס בריבוע */
+    gap: 2px;
+}
+
+/* סגנון ספציפי לכפתור הפלוס */
+.add-report-btn {
+    background-color: #89B0AE;
+    color: white;
+    position: static !important; /* מבטל הגדרות קודמות */
+}
+
+.pdf-floating-tab:hover, .add-report-btn:hover {
+    transform: scale(1.05);
+}
+
+.date-picker-bubble {
+    position: absolute;
+    bottom: 150px; /* מעל הכפתורים */
+    right: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+    z-index: 1001;
+    border: 2px solid #555B6E;
+}
+
+.date-picker-bubble label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #555B6E;
+    text-align: right;
+}
+
+.date-picker-bubble input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.btn-confirm-pdf {
+    background-color: #8BA9A9;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancel-pdf {
+    background: none;
+    border: none;
+    color: #EE6C4D;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.settings-floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.settings-floating-btn:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,337 @@
+/* הרקע החצי שקוף שמכסה את כל המסך */
+.report-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3); /* Overlay כהה עדין */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px); /* אפקט טשטוש קל לרקע */
+}
+
+/* כרטיס הטופס הירוק */
+.report-form-card {
+    background-color: #8BA9A9; /* הירוק מהעיצוב שלך */
+    width: 80%;
+    max-width: 360px;
+    border-radius: 35px; /* פינות מעוגלות מאוד */
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    max-height: 90vh; /* מקסימום 90% מגובה המסך */
+    overflow-y: auto; /* מאפשר גלילה פנימית אם המלל ארוך */
+    display: flex;
+    flex-direction: column;
+
+    max-height: 85vh; 
+    overflow-y: auto;
+    overflow-x: hidden; /* מניעת גלילה לצדדים */
+    
+    /* החלקת גלילה בטלפונים */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.report-form-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* 2. הרקע של המסילה (שקוף כדי שלא יכער) */
+.report-form-card::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 20px; /* גורם לפס הגלילה לא להיצמד לקצוות המעוגלים */
+}
+
+/* 3. ה"ידית" של הגלילה */
+.report-form-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* לבן שקוף עדין */
+    border-radius: 10px;
+}
+
+.report-form-card::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* פתרון לפיירפוקס */
+.report-form-card {
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.form-title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* שדה "מעביר המסדר" - טקסט בצד ימין וקו למטה */
+.input-group {
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.field-label {
+    display: block;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.bottom-line-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 5px 0;
+    outline: none;
+}
+
+/* אקורדיון קומות */
+.floor-accordion {
+    margin-bottom: 30px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floor-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.floor-content {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.inner-input {
+    width: 65%;
+    min-height: 80px; /* גובה התחלתי נוח */
+    max-height: 200px; /* מונע ממנה להשתלט על כל המסך */
+    resize: vertical; /* מאפשר למשתמש להגדיל ידנית אם צריך */
+    padding: 8px 10px;
+    font-size: 16px; /* חשוב למניעת Zoom-in אוטומטי מעצבן באייפון */
+    line-height: 1.4;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    color: white;
+    outline: none;
+    text-align: right;    /* מבטיח שהטקסט יתחיל מימין */
+    letter-spacing: normal; /* מוודא שאין רווח מוזר בין אותיות */
+    word-spacing: normal;   /* מוודא שאין רווח מוזר בין מילים */
+    display: block;
+}
+
+/* כפתורים בתחתית */
+.form-footer-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-save, .btn-cancel {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-save {
+    background-color: #555B6E; /* אפור כהה */
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #EE6C4D; /* כתום */
+    color: white;
+}
+
+/* --- עיצוב מצב צפייה (האפור) --- */
+.view-mode .view-header span {
+    color: #EE6C4D; /* הכתום של הכותרת הראשית */
+    font-weight: bold;
+    font-size: 1.2rem; /* הגדלה קלה כדי שזה ייראה כמו כותרת של סקציה */
+}
+
+.view-mode .view-header {
+    text-decoration-line: underline;
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    min-height: auto !important;
+}
+
+.view-mode .floor-content {
+    padding-top: 0px !important;
+}
+
+.view-mode .room-section {
+    border-top: none !important;
+    margin-top: 1px;
+    padding-top: 0;
+}
+
+.view-mode .report-form-card {
+    background-color: #dddfe2; /* אפור בהיר */
+    border: 4px solid #8BA9A9;  /* מסגרת טורקיז בולטת מהתמונה */
+    color: #4A4A4A;
+}
+
+.view-mode .form-title {
+    color: #EE6C4D; /* הכתום של התאריך */
+    font-size: 1.8rem;
+}
+
+.view-mode .field-label, 
+.view-mode .floor-header,
+.view-mode .label {
+    color: #5B6777; /* אפור כהה לטקסט */
+}
+
+.view-mode .bottom-line {
+    border-bottom: 2px solid #8BA9A9;
+    margin-bottom: 15px;
+}
+
+.view-mode .view-text-value {
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+/* שדות בתוך האקורדיון במצב צפייה */
+.view-mode .field-display {
+    text-align: right;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(132, 210, 210, 0.3);
+    padding-bottom: 5px;
+}
+
+.view-mode .value {
+    margin: 5px 0;
+    color: #333;
+    white-space: pre-wrap; /* שומר על ירידות שורה שהמשתמש עשה */
+    word-break: break-word;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* כפתור סגירה במצב צפייה */
+.btn-view-close {
+    width: 100%;
+    background-color: #8BA9A9;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view-mode .accordion-item {
+    border-bottom: 1px solid #8BA9A9;
+}
+
+.room-section {
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.room-title {
+    color: #555B6E;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.room-header-with-info {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.room-meta-info {
+  font-size: 0.8rem;
+  color: #7f8c8d; /* אפור עדין */
+  margin-top: 2px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.add-space-row {
+    margin-top: 15px;
+    padding: 0; /* ביטלנו את הפאדינג של המעטפת */
+    display: flex;
+    justify-content: center;
+}
+
+.add-space-row select {
+    color: white;
+    background: #555B6E;
+    padding: 5px;
+}
+
+.add-space-select {
+    background: rgba(255, 255, 255, 0.1); /* רקע בהיר מאוד ושקוף */
+    color: rgba(255, 255, 255, 0.9); /* טקסט לבן מעט שקוף */
+    border: 1px dashed rgba(255, 255, 255, 0.3); /* מסגרת מקווקווקת דקה מאוד */
+    border-radius: 20px; /* פינות עגולות כמו כפתור */
+    padding: 6px 15px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    width: auto; /* לא תופס את כל הרוחב, רק כמה שצריך */
+    min-width: 160px;
+    text-align: center;
+    appearance: none; /* מבטל את החץ הסטנדרטי של הדפדפן למראה נקי */
+}
+
+.add-space-select:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.add-space-select option {
+    background-color: #555B6E; /* צבע כהה לרקע של הרשימה */
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,26 @@
+.tabs-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #555B6E; /* הקו המפריד מתחת לטאבים */
+  background-color: #FEF5EB;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+
+.tab-button {
+  border: none;
+  background: none;
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555B6E; /* הצבע שציינת בקובץ המקורי */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* עיצוב הטאב הפעיל לפי התמונה */
+.tab-button.active {
+  background-color: #555B6E;
+  color: #FEF5EB;
+  border-radius: 10px 10px 0 0; /* פינות מעוגלות רק למעלה */
+}
