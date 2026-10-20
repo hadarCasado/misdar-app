@@ -42,7 +42,7 @@ const SettingsPage = ({ onClose }) => {
         });
         if (result.success) {
             alert("ההגדרות נשמרו בהצלחה!");
-            onClose(); // סגירת העמוד לאחר שמירה מוצלחת
+            onClose();
         } else {
             alert("שגיאה בשמירת הנתונים");
         }
@@ -146,7 +146,7 @@ const SettingsPage = ({ onClose }) => {
                     </div>
                 ))}
 
-                <div style={{ height: '100px' }}></div> {/* מרווח בוטום */}
+                <div style={{ height: '100px' }}></div> 
             </div>
 
             {/* כפתור שמירה צף בתחתית */}

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // הוספנו את זה
+import { getFirestore } from "firebase/firestore"; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyDhOi9M9pRSnTDTTzUv2yYNN8DRYVaK1qY",
@@ -11,8 +11,6 @@ const firebaseConfig = {
   measurementId: "G-YK9D92WB0M"
 };
 
-// אתחול האפליקציה
 const app = initializeApp(firebaseConfig);
 
-// ייצוא מסד הנתונים כדי שנוכל להשתמש בו ב-App.js
 export const db = getFirestore(app);

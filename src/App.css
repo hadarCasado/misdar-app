@@ -38,12 +38,12 @@
 }
 
 .app-container {
-  background-color: #FEF5EB; /* צבע הרקע מהתמונה */
+  background-color: #FEF5EB; 
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* מרכוז אופקי */
+  align-items: center; 
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -51,10 +51,10 @@
 
 .main-content {
   width: 100%;
-  max-width: 500px; /* הגבלה לרוחב טלפון ממוצע */
+  max-width: 500px; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* מרכוז תוכן פנימי */
+  align-items: center; 
   padding: 20px;
   flex: 1;
 }
@@ -70,7 +70,7 @@
 }
 
 .main-title{
-  color: #EE6C4D; /* הכתום מהתמונה */
+  color: #EE6C4D; 
   font-size: 2rem;
   margin: 0;
   position: relative;
@@ -86,7 +86,6 @@
   
 }
 
-/* מיכל הכפתורים הצפים */
 .fab-container {
     position: fixed;
     bottom: 25px;
@@ -98,11 +97,11 @@
     z-index: 1000;
 }
 
-/* הגדרת גודל אחיד לשני הכפתורים */
+
 .pdf-floating-tab, .add-report-btn {
-    width: 50px;  /* גודל אחיד */
-    height: 50px; /* גודל אחיד */
-    border-radius: 16px; /* פינות מעוגלות בסגנון הטאבים */
+    width: 50px;  
+    height: 50px; 
+    border-radius: 16px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,23 +109,21 @@
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
-    padding: 0; /* ביטול פאדינג שמשפיע על הגודל */
+    padding: 0; 
 }
 
-/* סגנון ספציפי לכפתור ה-PDF */
 .pdf-floating-tab {
     background-color: #555B6E;
     color: white;
-    flex-direction: column; /* אייקון מעל טקסט קטן */
-    font-size: 10px; /* טקסט קטן מאוד כדי שייכנס בריבוע */
+    flex-direction: column; 
+    font-size: 10px; 
     gap: 2px;
 }
 
-/* סגנון ספציפי לכפתור הפלוס */
 .add-report-btn {
     background-color: #89B0AE;
     color: white;
-    position: static !important; /* מבטל הגדרות קודמות */
+    position: static !important; 
 }
 
 .pdf-floating-tab:hover, .add-report-btn:hover {
@@ -135,7 +132,7 @@
 
 .date-picker-bubble {
     position: absolute;
-    bottom: 150px; /* מעל הכפתורים */
+    bottom: 150px; 
     right: 0;
     background: white;
     padding: 15px;

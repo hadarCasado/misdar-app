@@ -1,36 +1,33 @@
-/* הרקע החצי שקוף שמכסה את כל המסך */
 .report-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3); /* Overlay כהה עדין */
+    background-color: rgba(0, 0, 0, 0.3); 
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(2px); /* אפקט טשטוש קל לרקע */
+    backdrop-filter: blur(2px); 
 }
 
-/* כרטיס הטופס הירוק */
 .report-form-card {
-    background-color: #8BA9A9; /* הירוק מהעיצוב שלך */
+    background-color: #8BA9A9; 
     width: 80%;
     max-width: 360px;
-    border-radius: 35px; /* פינות מעוגלות מאוד */
+    border-radius: 35px; 
     padding: 30px 25px;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
-    max-height: 90vh; /* מקסימום 90% מגובה המסך */
-    overflow-y: auto; /* מאפשר גלילה פנימית אם המלל ארוך */
+    max-height: 90vh; 
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
 
     max-height: 85vh; 
     overflow-y: auto;
-    overflow-x: hidden; /* מניעת גלילה לצדדים */
+    overflow-x: hidden; 
     
-    /* החלקת גלילה בטלפונים */
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
@@ -39,15 +36,14 @@
     width: 6px;
 }
 
-/* 2. הרקע של המסילה (שקוף כדי שלא יכער) */
+
 .report-form-card::-webkit-scrollbar-track {
     background: transparent;
-    margin: 20px; /* גורם לפס הגלילה לא להיצמד לקצוות המעוגלים */
+    margin: 20px; 
 }
 
-/* 3. ה"ידית" של הגלילה */
 .report-form-card::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3); /* לבן שקוף עדין */
+    background: rgba(255, 255, 255, 0.3); 
     border-radius: 10px;
 }
 
@@ -55,7 +51,6 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* פתרון לפיירפוקס */
 .report-form-card {
     position: relative;
     scrollbar-width: thin;
@@ -71,7 +66,6 @@
     font-weight: bold;
 }
 
-/* שדה "מעביר המסדר" - טקסט בצד ימין וקו למטה */
 .input-group {
     margin-bottom: 25px;
     text-align: right;
@@ -94,7 +88,6 @@
     outline: none;
 }
 
-/* אקורדיון קומות */
 .floor-accordion {
     margin-bottom: 30px;
 }
@@ -132,11 +125,11 @@
 
 .inner-input {
     width: 65%;
-    min-height: 80px; /* גובה התחלתי נוח */
-    max-height: 200px; /* מונע ממנה להשתלט על כל המסך */
-    resize: vertical; /* מאפשר למשתמש להגדיל ידנית אם צריך */
+    min-height: 80px; 
+    max-height: 200px; 
+    resize: vertical;
     padding: 8px 10px;
-    font-size: 16px; /* חשוב למניעת Zoom-in אוטומטי מעצבן באייפון */
+    font-size: 16px; 
     line-height: 1.4;
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -144,13 +137,12 @@
     padding: 5px;
     color: white;
     outline: none;
-    text-align: right;    /* מבטיח שהטקסט יתחיל מימין */
-    letter-spacing: normal; /* מוודא שאין רווח מוזר בין אותיות */
-    word-spacing: normal;   /* מוודא שאין רווח מוזר בין מילים */
+    text-align: right;    
+    letter-spacing: normal; 
+    word-spacing: normal;   
     display: block;
 }
 
-/* כפתורים בתחתית */
 .form-footer-buttons {
     display: flex;
     gap: 15px;
@@ -167,20 +159,20 @@
 }
 
 .btn-save {
-    background-color: #555B6E; /* אפור כהה */
+    background-color: #555B6E;
     color: white;
 }
 
 .btn-cancel {
-    background-color: #EE6C4D; /* כתום */
+    background-color: #EE6C4D; 
     color: white;
 }
 
 /* --- עיצוב מצב צפייה (האפור) --- */
 .view-mode .view-header span {
-    color: #EE6C4D; /* הכתום של הכותרת הראשית */
+    color: #EE6C4D; 
     font-weight: bold;
-    font-size: 1.2rem; /* הגדלה קלה כדי שזה ייראה כמו כותרת של סקציה */
+    font-size: 1.2rem; 
 }
 
 .view-mode .view-header {
@@ -202,20 +194,20 @@
 }
 
 .view-mode .report-form-card {
-    background-color: #dddfe2; /* אפור בהיר */
-    border: 4px solid #8BA9A9;  /* מסגרת טורקיז בולטת מהתמונה */
+    background-color: #dddfe2; 
+    border: 4px solid #8BA9A9;  
     color: #4A4A4A;
 }
 
 .view-mode .form-title {
-    color: #EE6C4D; /* הכתום של התאריך */
+    color: #EE6C4D; 
     font-size: 1.8rem;
 }
 
 .view-mode .field-label, 
 .view-mode .floor-header,
 .view-mode .label {
-    color: #5B6777; /* אפור כהה לטקסט */
+    color: #5B6777; 
 }
 
 .view-mode .bottom-line {
@@ -228,7 +220,6 @@
     font-weight: bold;
 }
 
-/* שדות בתוך האקורדיון במצב צפייה */
 .view-mode .field-display {
     text-align: right;
     margin-bottom: 10px;
@@ -239,7 +230,7 @@
 .view-mode .value {
     margin: 5px 0;
     color: #333;
-    white-space: pre-wrap; /* שומר על ירידות שורה שהמשתמש עשה */
+    white-space: pre-wrap; 
     word-break: break-word;
     background: rgba(255, 255, 255, 0.4);
     padding: 10px;
@@ -247,7 +238,6 @@
     margin-top: 5px;
 }
 
-/* כפתור סגירה במצב צפייה */
 .btn-view-close {
     width: 100%;
     background-color: #8BA9A9;
@@ -284,7 +274,7 @@
 
 .room-meta-info {
   font-size: 0.8rem;
-  color: #7f8c8d; /* אפור עדין */
+  color: #7f8c8d; 
   margin-top: 2px;
   display: flex;
   gap: 8px;
@@ -293,7 +283,7 @@
 
 .add-space-row {
     margin-top: 15px;
-    padding: 0; /* ביטלנו את הפאדינג של המעטפת */
+    padding: 0; 
     display: flex;
     justify-content: center;
 }
@@ -305,20 +295,20 @@
 }
 
 .add-space-select {
-    background: rgba(255, 255, 255, 0.1); /* רקע בהיר מאוד ושקוף */
-    color: rgba(255, 255, 255, 0.9); /* טקסט לבן מעט שקוף */
-    border: 1px dashed rgba(255, 255, 255, 0.3); /* מסגרת מקווקווקת דקה מאוד */
-    border-radius: 20px; /* פינות עגולות כמו כפתור */
+    background: rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.9); 
+    border: 1px dashed rgba(255, 255, 255, 0.3); 
+    border-radius: 20px; 
     padding: 6px 15px;
     font-family: inherit;
     font-size: 0.85rem;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
-    width: auto; /* לא תופס את כל הרוחב, רק כמה שצריך */
+    width: auto; 
     min-width: 160px;
     text-align: center;
-    appearance: none; /* מבטל את החץ הסטנדרטי של הדפדפן למראה נקי */
+    appearance: none; 
 }
 
 .add-space-select:hover {
@@ -327,7 +317,7 @@
 }
 
 .add-space-select option {
-    background-color: #555B6E; /* צבע כהה לרקע של הרשימה */
+    background-color: #555B6E; 
     color: white;
 }
 

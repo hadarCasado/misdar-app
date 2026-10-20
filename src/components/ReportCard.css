@@ -1,4 +1,3 @@
-/* המיכל החיצוני של כל דוח - יוצר מרווח בין דוח לדוח */
 .report-card-wrapper {
   width: 80%;
   margin-bottom: 20px;
@@ -7,14 +6,13 @@
 }
 
 .report-card-wrapper:active {
-  transform: scale(0.98); /* אפקט לחיצה קטן */
+  transform: scale(0.98); 
 }
 
-/* הבועה עצמה */
 .report-card-bubble {
-  background-color: #bde7f048; /* הרקע הירקרק-אפור */
-  border: 3px solid #89B0AE;  /* המסגרת הטורקיז */
-  border-radius: 25px;       /* פינות מעוגלות מאוד */
+  background-color: #bde7f048;
+  border: 3px solid #89B0AE;  
+  border-radius: 25px;      
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
@@ -35,13 +33,13 @@
 }
 
 .report-card-date {
-  color: #EE6C4D; /* הכתום של התאריך */
+  color: #EE6C4D; 
   font-weight: bold;
 }
 
 .report-card-divider {
   height: 1px;
-  background-color: rgba(132, 210, 210, 0.5); /* קו מפריד עדין בטורקיז */
+  background-color: rgba(132, 210, 210, 0.5); 
   width: 100%;
 }
 

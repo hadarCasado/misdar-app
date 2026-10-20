@@ -14,8 +14,8 @@ const ReportForm = ({
   setFormData,
   buildingName,
   onDelete,
-  setIsViewMode, // וודא שאתה מעביר את זה מהקומפוננטה שקוראת ל-ReportForm
-  handleDownloadPDF // כנ"ל
+  setIsViewMode, 
+  handleDownloadPDF 
 }) => {
   const [openFloor, setOpenFloor] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
@@ -32,7 +32,7 @@ const ReportForm = ({
     }
   };
 
-  // CHANGED: פונקציה לזיהוי הבניין לצורך שליפת נתונים מהקונטקסט
+  // פונקציה לזיהוי הבניין לצורך שליפת נתונים מהקונטקסט
   const getBuildingId = () => {
     if (buildingName.includes('3')) return 3;
     if (buildingName.includes('4')) return 4;
@@ -73,8 +73,8 @@ const ReportForm = ({
           <ReportMenu
             showMenu={showMenu}
             setShowMenu={setShowMenu}
-            onEdit={() => setIsViewMode(false)} // דוגמה לשינוי מצב
-            onDownloadPDF={handleDownloadPDF}   // פונקציה שתצרי בהמשך
+            onEdit={() => setIsViewMode(false)} 
+            onDownloadPDF={handleDownloadPDF}   
             onDelete={onDelete}
           />
         )}
@@ -161,7 +161,6 @@ const ReportForm = ({
                     {formData.floors[floor].rooms && (() => {
                       const rooms = formData.floors[floor].rooms;
 
-                      // מיון החדרים: קודם אלו שב-ROOM_ORDER, ואז כל השאר
                       const sortedRoomNames = Object.keys(rooms).sort((a, b) => {
                         const indexA = ROOM_ORDER.indexOf(a);
                         const indexB = ROOM_ORDER.indexOf(b);
@@ -179,7 +178,6 @@ const ReportForm = ({
                             <div className="room-header-with-info">
                               <span className="room-title">{roomName}</span>
 
-                              {/* הלוגיקה החדשה שמושכת מה-Firebase או מהקובץ הסטטי כגיבוי */}
                               {(() => {
                                 const buildingId = getBuildingId();
                                 const info = settings?.ROOM_INFO?.[buildingId]?.[floor]?.[roomName];
@@ -230,7 +228,7 @@ const ReportForm = ({
                         );
                       });
                     })()}
-                    {/* אזור הוספת מקום עם מסגרת מקווקווקת */}
+                    {/* הוספת מקום */}
                     {!isViewOnly && (
                       <div className="add-space-row">
                         <select

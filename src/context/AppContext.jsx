@@ -9,13 +9,11 @@ export const ContextProvider = ({ children }) => {
     const [settings, setSettings] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // האזנה לשינויים ב-Firebase בזמן אמת
     useEffect(() => {
         const unsubscribe = onSnapshot(doc(db, "settings", "globalConfig"), (docSnap) => {
             if (docSnap.exists()) {
                 setSettings(docSnap.data());
             } else {
-                // אם אין נתונים בענן, נשתמש בברירות המחדל מהקובץ הסטטי
                 setSettings({
                     BUILDING_MANAGERS: {
                         3: "ליאם בר גבע ואורי קורקט",
@@ -31,7 +29,6 @@ export const ContextProvider = ({ children }) => {
         return () => unsubscribe();
     }, []);
 
-    // פונקציה לעדכון הגדרות (מיועדת לשימוש מה-SettingsPage)
     const updateSettings = async (newSettings) => {
         try {
             await setDoc(doc(db, "settings", "globalConfig"), newSettings);
@@ -49,7 +46,6 @@ export const ContextProvider = ({ children }) => {
     );
 };
 
-// Hook מותאם אישית לשימוש קל ברכיבים
 export const useSettings = () => {
     const context = useContext(SettingsContext);
     if (!context) {

@@ -46,9 +46,9 @@
 }
 
 .back-btn {
-    background: #f0f0f0; /* רקע אפרפר עדין */
+    background: #f0f0f0; 
     border: none;
-    border-radius: 50%; /* הופך אותו לעגול */
+    border-radius: 50%; 
     width: 40px;
     height: 40px;
     display: flex;
@@ -62,14 +62,13 @@
 
 .back-btn:hover {
     background-color: #e0e0e0;
-    transform: translateX(3px); /* אפקט קטן של תנועה לכיוון החץ */
+    transform: translateX(3px); 
 }
 
 .back-btn:active {
     transform: scale(0.95);
 }
 
-/* הלייבל מעל האינפוט */
 .settings-label {
     font-size: 0.9rem;
     font-weight: 600;
@@ -77,7 +76,6 @@
     margin-right: 5px;
 }
 
-/* עיצוב האינפוט עצמו */
 .manager-input {
     width: 60%;
     padding: 12px 10px;
@@ -93,20 +91,17 @@
     margin-right: 1vh;
 }
 
-/* אפקט כשלוחצים על האינפוט */
 .manager-input:focus {
-    border-color: #89B0AE; /* הצבע הירוק/טורקיז שלך */
-    box-shadow: 0 0 0 4px rgba(137, 176, 174, 0.15); /* הילה עדינה */
+    border-color: #89B0AE; 
+    box-shadow: 0 0 0 4px rgba(137, 176, 174, 0.15); 
     background-color: #fff;
 }
 
-/* עיצוב Placeholder */
 .manager-input::placeholder {
     color: #BDBDBD;
     font-size: 0.9rem;
 }
 
-/* בונוס: עיצוב הכותרת של הסקשן */
 .section-title {
     font-size: 1.2rem;
     color: #89B0AE;
@@ -124,7 +119,6 @@
     background: #eee;
 }
 
-/* אקורדיון */
 .setting-accordion-item {
     background: rgb(231, 231, 231);
     border-radius: 12px;
@@ -154,15 +148,14 @@
 
 .room-edit-grid {
     display: flex;
-    flex-direction: column; /* שם החדר למעלה, האינפוטים מתחתיו */
+    flex-direction: column; 
     gap: 8px;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px dashed #eee;
-    align-items: flex-start; /* מצמיד הכל לימין */
+    align-items: flex-start; 
 }
 
-/* שם החדר */
 .room-name-label {
     font-size: 0.9rem;
     font-weight: 700;
@@ -170,17 +163,15 @@
     margin-bottom: 2px;
 }
 
-/* שורת האינפוטים - כאן אנחנו שולטים באורך שלהם */
 .room-inputs-row {
     display: flex;
     gap: 10px;
-    width: 100%; /* המעטפת מלאה, אבל האינפוטים בפנים יהיו קצרים */
+    width: 100%; 
 }
 
-/* האינפוטים עצמם - כאן הקיצור! */
 .settings-input-small {
-    width: 32%; /* כל אינפוט תופס פחות מחצי רוחב */
-    max-width: 140px; /* מוודא שהם לא יגדלו מדי במסכים רחבים */
+    width: 32%; 
+    max-width: 140px; 
     height: 25px;
     padding: 5px 8px;
     border: 1px solid #D1D5DB;
@@ -209,7 +200,6 @@
     text-decoration: underline;
 }
 
-/* כפתור שמירה צף */
 .floating-save-btn {
     position: fixed;
     bottom: 20px;
