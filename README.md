@@ -33,7 +33,7 @@ This application solves a real-world operational challenge by replacing manual p
 
 ## 🚀 Live Demo
 
-Check out the live application here: [Live Demo Link](misdar-app.vercel.app)
+Check out the live application here: [Live Demo Link](https://misdar-app.vercel.app)
 
 ---
 
