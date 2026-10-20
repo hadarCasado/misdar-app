@@ -1,4 +1,4 @@
-# 📋 Misdar App - Inspection & Report Management System
+# Misdar App - Inspection & Report Management System
 
 An interactive, responsive web application designed to streamline housing and duty inspection logs, track deficiencies in real time, manage administrative settings, and automate report generation.
 
@@ -10,7 +10,7 @@ This application solves a real-world operational challenge by replacing manual p
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Real-time Deficiency Tracking:** Easily log, review, and update inspection statuses using Firebase Firestore.
 * **Admin & Settings Panel:** Dedicated management view (`SettingsPage`) for configuring system preferences and administrative controls.
@@ -21,7 +21,7 @@ This application solves a real-world operational challenge by replacing manual p
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React, JavaScript (ES6+), HTML5, CSS3 / Tailwind CSS
 * **State Management:** Context API
@@ -37,7 +37,7 @@ Check out the live application here: [Live Demo Link](misdar-app.vercel.app)
 
 ---
 
-## 💻 Getting Started Locally
+## Getting Started Locally
 
 To run this project locally on your machine:
 
