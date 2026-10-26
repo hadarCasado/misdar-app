@@ -2,7 +2,7 @@ import React from 'react';
 import { MoreVertical, Trash2, Edit2 } from 'lucide-react';
 import './ReportMenu.css';
 
-const ReportMenu = ({ showMenu, setShowMenu, onEdit, onDownloadPDF, onDelete }) => {
+const ReportMenu = ({ showMenu, setShowMenu, onEdit, onDelete }) => {
   return (
     <div className="menu-container">
       <button className="menu-trigger-btn" onClick={() => setShowMenu(!showMenu)}>

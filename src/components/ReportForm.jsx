@@ -74,7 +74,6 @@ const ReportForm = ({
             showMenu={showMenu}
             setShowMenu={setShowMenu}
             onEdit={() => setIsViewMode(false)} 
-            onDownloadPDF={handleDownloadPDF}   
             onDelete={onDelete}
           />
         )}
