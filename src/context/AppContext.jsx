@@ -16,9 +16,9 @@ export const ContextProvider = ({ children }) => {
             } else {
                 setSettings({
                     BUILDING_MANAGERS: {
-                        3: "ליאם בר גבע ואורי קורקט",
-                        4: "הדר קסדו",
-                        5: "יהלי מימון שפירא"
+                        3: "ישראל ישראלי",
+                        4: "ישראל ישראלי",
+                        5: "ישראל ישראלי"
                     },
                     ROOM_INFO: DEFAULT_ROOM_INFO
                 });
